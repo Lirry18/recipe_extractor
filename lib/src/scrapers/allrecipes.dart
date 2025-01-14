@@ -16,7 +16,7 @@ class Allrecipes implements Scarper {
   @override
   List<String>? ingredients() {
     List<Element> ingredientsElList =
-        document!.querySelectorAll(".mntl-structured-ingredients__list-item p");
+        document!.querySelectorAll(".mm-recipes-structured-ingredients__list-item p");
     List<String> ingredients = [];
 
     for (var ingredientEl in ingredientsElList) {
@@ -29,7 +29,7 @@ class Allrecipes implements Scarper {
   @override
   List<String>? instructions() {
     List<Node> instructionsElList =
-        document!.querySelectorAll("#recipe__steps-content_1-0 p");
+        document!.querySelectorAll("#mm-recipes-steps__content_1-0 p");
     List<String> instructions = [];
 
     for (var instructionEl in instructionsElList) {
